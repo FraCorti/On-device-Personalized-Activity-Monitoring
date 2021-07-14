@@ -17,4 +17,3 @@ for the user to predict his movements with the smartphone
 in different positions not covered in the training set. This is
 done without having to retrain the whole model but by only
 updating the weights of the last part, called head.
-The main implemented techniques are gradient descent with backpropagation, k-fold cross-validation and grid-search (parallel and sequential).
