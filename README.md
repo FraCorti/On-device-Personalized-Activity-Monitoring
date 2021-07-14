@@ -1,4 +1,4 @@
-# On-device-Personalized-Activity-Monitoring
+# On-device Personalized Activity-Monitoring
 
 For the Mobile Computing [Laboratory](https://online.tugraz.at/tug_online/wbLv.wbShowLVDetail?pStpSpNr=216713) we developed an application able to predict what kind of activity the user is currently doing. This was achieved by deploying multiple machine learning models (feedforward neural networks) by exploiting the [Tensorflow Lite](https://www.tensorflow.org/lite/guide) library. The models were trained on the accelerometer values obtained from the phone. More information about the project can be found in the [report](https://github.com/FraCorti/On-device-Personalized-Activity-Monitoring/blob/main/Mobile_Computing_Laboratory___report.pdf).
 
