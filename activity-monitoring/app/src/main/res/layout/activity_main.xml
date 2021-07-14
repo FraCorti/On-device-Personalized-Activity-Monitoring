@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/centerShim"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"/>
+
+    <Spinner
+        android:id="@+id/spinnerActivityType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        android:backgroundTint="@color/light_grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonStart"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/centerShim"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@+id/spinnerActivityType"
+        android:backgroundTint="@color/violet"
+        android:textColor="@color/white"
+        android:text="@string/STRING_BUTTON_START"
+        android:onClick="startRecordingActivity" />
+
+    <Button
+        android:id="@+id/buttonStop"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/centerShim"
+        android:layout_marginStart="10dp"
+        android:layout_below="@+id/spinnerActivityType"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="0dp"
+        android:backgroundTint="@color/violet"
+        android:textColor="@color/white"
+        android:text="@string/STRING_BUTTON_STOP"
+        android:onClick="stopRecordingActivity"/>
+
+    <TextView
+        android:id="@+id/textviewRecordingStatus"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@+id/buttonStart"
+        android:textColor="@color/white"
+        android:gravity="center" />
+
+    <View
+        android:id="@+id/dividerRecording"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="1dp"
+        android:layout_below="@+id/textviewRecordingStatus"
+        android:background="@android:color/darker_gray"/>
+
+    <Button
+        android:id="@+id/buttonWriteToFile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/centerShim"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@+id/dividerRecording"
+        android:backgroundTint="@color/violet"
+        android:textColor="@color/white"
+        android:text="@string/STRING_BUTTON_WRITE_TO_FILE"
+        android:onClick="writeToFileActivity"/>
+
+    <Button
+        android:id="@+id/buttonDeleteDB"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/centerShim"
+        android:layout_marginStart="10dp"
+        android:layout_below="@+id/dividerRecording"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="0dp"
+        android:backgroundTint="@color/violet"
+        android:textColor="@color/white"
+        android:text="@string/STRING_BUTTON_DELETE_DATA"
+        android:onClick="deleteDbEntriesActivity"/>
+
+    <TextView
+        android:id="@+id/textviewWritingStatus"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@+id/buttonWriteToFile"
+        android:textColor="@color/white"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/textViewDeletionStatus"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@id/textviewWritingStatus"
+        android:textColor="@color/white"
+        android:gravity="center" />
+
+    <View
+        android:id="@+id/dividerFiles"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="1dp"
+        android:layout_below="@+id/textViewDeletionStatus"
+        android:background="@android:color/darker_gray"/>
+
+    <TextView
+        android:id="@+id/textviewEstimation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dividerFiles"
+        android:layout_centerHorizontal="true"
+        android:text="@string/STRING_ESTIMATION"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textviewSitting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textviewEstimation"
+        android:text="@string/STRING_SITTING" />
+
+    <TextView
+        android:id="@+id/textviewSittingEstimation"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@+id/textviewSitting" />
+
+    <TextView
+        android:id="@+id/textviewStanding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textviewSittingEstimation"
+        android:text="@string/STRING_STANDING" />
+
+    <TextView
+        android:id="@+id/textviewStandingEstimation"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@+id/textviewStanding"/>
+
+    <View
+        android:id="@+id/dividerEstimation"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/textviewStandingEstimation"
+        android:background="@android:color/darker_gray"/>
+
+    <Button
+        android:id="@+id/buttonStartEstimation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/centerShim"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@+id/dividerEstimation"
+        android:backgroundTint="@color/violet"
+        android:textColor="@color/white"
+        android:text="@string/STRING_BUTTON_START_ESTIMATION"
+        android:onClick="startEstimationActivity"/>
+
+    <Button
+        android:id="@+id/buttonStopEstimation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/centerShim"
+        android:layout_marginStart="10dp"
+        android:layout_below="@+id/dividerEstimation"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="0dp"
+        android:backgroundTint="@color/violet"
+        android:textColor="@color/white"
+        android:text="@string/STRING_BUTTON_STOP_ESTIMATION"
+        android:onClick="stopEstimationActivity" />
+
+    <TextView
+        android:id="@+id/textviewEstimationStatus"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@+id/buttonStartEstimation"
+        android:textColor="@color/white"
+        android:background="@color/red"
+        android:gravity="center" />
+
+    <View
+        android:id="@+id/dividerEstimationButtons"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/textviewEstimationStatus"
+        android:background="@android:color/darker_gray"/>
+
+    <Button
+            android:id="@+id/buttonToTransferPage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dividerEstimationButtons"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="@color/violet"
+            android:textColor="@color/white"
+            android:text="@string/STRING_CHANGE_PAGE"
+            android:onClick="changeToTransferLearningPage" />
+
+</RelativeLayout>

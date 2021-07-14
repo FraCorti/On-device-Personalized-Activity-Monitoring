@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        tools:context=".MainActivity"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+    <View
+        android:id="@+id/centerShim"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"/>
+
+    <View
+        android:id="@+id/onethirdShim"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:visibility="invisible"
+        android:layout_marginStart="132dp"/>
+
+    <View
+        android:id="@+id/twothirdShim"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:visibility="invisible"
+        android:layout_marginStart="264dp"/>
+
+    <Button
+        android:id="@+id/buttonToTransferPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="@color/violet"
+        android:textColor="@color/white"
+        android:text="@string/STRING_BACK"
+        android:onClick="changeToMainPage" />
+
+    <View
+        android:id="@+id/dividerBackButton"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@+id/buttonToTransferPage"
+        android:background="@android:color/darker_gray"/>
+
+    <Spinner
+        android:id="@+id/spinnerActivityType2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dividerBackButton"
+        android:layout_marginStart="0dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        android:backgroundTint="@color/light_grey" />
+
+    <View
+        android:id="@+id/dividerSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/spinnerActivityType2"
+        android:background="@android:color/darker_gray"/>
+
+    <Button
+        android:id="@+id/buttonStartDataCollection"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/centerShim"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@+id/dividerSpinner"
+        android:backgroundTint="@color/violet"
+        android:textColor="@color/white"
+        android:text="@string/STRING_START_COLLECTING"
+        android:onClick="startDataCollectionActivity"/>
+
+    <Button
+        android:id="@+id/buttonStopDataCollection"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/centerShim"
+        android:layout_marginStart="10dp"
+        android:layout_below="@+id/dividerSpinner"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="0dp"
+        android:backgroundTint="@color/violet"
+        android:textColor="@color/white"
+        android:text="@string/STRING_STOP_COLLECTING"
+        android:onClick="stopDataCollectionActivity" />
+
+    <TextView
+        android:id="@+id/textviewDataCollectionStatus"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@+id/buttonStartDataCollection"
+        android:textColor="@color/white"
+        android:background="@color/red"
+        android:gravity="center" />
+
+    <View
+        android:id="@+id/dividerDataCollectionButtons"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/textviewDataCollectionStatus"
+        android:background="@android:color/darker_gray"/>
+
+    <Button
+        android:id="@+id/buttonStartTraining"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/centerShim"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@+id/dividerDataCollectionButtons"
+        android:backgroundTint="@color/violet"
+        android:textColor="@color/white"
+        android:text="@string/STRING_START_TRAINING"
+        android:onClick="startTrainingActivity"/>
+
+    <Button
+        android:id="@+id/buttonStopTraining"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/centerShim"
+        android:layout_marginStart="10dp"
+        android:layout_below="@+id/dividerDataCollectionButtons"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="0dp"
+        android:backgroundTint="@color/violet"
+        android:textColor="@color/white"
+        android:text="@string/STRING_STOP_TRAINING"
+        android:onClick="stopTrainingActivity" />
+
+    <TextView
+        android:id="@+id/textviewTrainingStatus"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@+id/buttonStartTraining"
+        android:textColor="@color/white"
+        android:background="@color/red"
+        android:gravity="center" />
+
+    <View
+        android:id="@+id/dividerTrainingButtons"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/textviewTrainingStatus"
+        android:background="@android:color/darker_gray"/>
+
+    <Button
+        android:id="@+id/buttonStartInference"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/centerShim"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@+id/dividerTrainingButtons"
+        android:backgroundTint="@color/violet"
+        android:textColor="@color/white"
+        android:text="@string/STRING_START_INFERENCE"
+        android:onClick="startInferenceActivity"/>
+
+    <Button
+        android:id="@+id/buttonStopInference"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/centerShim"
+        android:layout_marginStart="10dp"
+        android:layout_below="@+id/dividerTrainingButtons"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="0dp"
+        android:backgroundTint="@color/violet"
+        android:textColor="@color/white"
+        android:text="@string/STRING_STOP_INFERENCE"
+        android:onClick="stopInferenceActivity" />
+
+    <TextView
+        android:id="@+id/textviewInferenceStatus"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@+id/buttonStartInference"
+        android:textColor="@color/white"
+        android:background="@color/red"
+        android:gravity="center" />
+
+    <View
+        android:id="@+id/dividerInferenceButtons"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/textviewInferenceStatus"
+        android:background="@android:color/darker_gray"/>
+
+    <TextView
+        android:id="@+id/textviewTFEstimation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dividerInferenceButtons"
+        android:layout_centerHorizontal="true"
+        android:text="@string/STRING_ESTIMATION_T2"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textviewModel1Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textviewTFEstimation"
+        android:text="@string/model_1" />
+
+    <TextView
+        android:id="@+id/textviewModel2Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textviewTFEstimation"
+        android:layout_toEndOf="@+id/onethirdShim"
+        android:text="@string/model_2" />
+
+    <TextView
+        android:id="@+id/textviewModel3Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textviewTFEstimation"
+        android:layout_toEndOf="@+id/twothirdShim"
+        android:text="@string/model_3" />
+
+    <TextView
+        android:id="@+id/textviewM1FirstPlace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textviewModel1Title"
+        android:text="@string/STRING_MOST_LIKELY" />
+
+    <TextView
+        android:id="@+id/textviewM2FirstPlace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textviewModel1Title"
+        android:layout_toEndOf="@+id/onethirdShim"
+        android:text="@string/STRING_MOST_LIKELY" />
+
+    <TextView
+        android:id="@+id/textviewM3FirstPlace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textviewModel1Title"
+        android:layout_toEndOf="@+id/twothirdShim"
+        android:text="@string/STRING_MOST_LIKELY" />
+
+    <TextView
+        android:id="@+id/textviewM1FirstPlaceEstimate"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@+id/textviewM1FirstPlace"
+        android:layout_alignEnd="@+id/onethirdShim"/>
+
+    <TextView
+        android:id="@+id/textviewM2FirstPlaceEstimate"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@+id/textviewM2FirstPlace"
+        android:layout_toEndOf="@+id/onethirdShim"
+        android:layout_alignEnd="@+id/twothirdShim"/>
+
+    <TextView
+        android:id="@+id/textviewM3FirstPlaceEstimate"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@+id/textviewM3FirstPlace"
+        android:layout_toEndOf="@+id/twothirdShim"/>
+
+    <TextView
+        android:id="@+id/textviewM1SecondPlace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textviewM1FirstPlaceEstimate"
+        android:text="@string/STRING_SECOND_MOST_LIKELY"/>
+
+    <TextView
+        android:id="@+id/textviewM2SecondPlace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textviewM1FirstPlaceEstimate"
+        android:text="@string/STRING_SECOND_MOST_LIKELY"
+        android:layout_toEndOf="@+id/onethirdShim"/>
+
+    <TextView
+        android:id="@+id/textviewM3SecondPlace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textviewM1FirstPlaceEstimate"
+        android:text="@string/STRING_SECOND_MOST_LIKELY"
+        android:layout_toEndOf="@+id/twothirdShim"/>
+
+    <TextView
+        android:id="@+id/textviewM1SecondPlaceEstimate"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@+id/textviewM1SecondPlace"
+        android:layout_alignEnd="@+id/onethirdShim"/>
+
+    <TextView
+        android:id="@+id/textviewM2SecondPlaceEstimate"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@+id/textviewM1SecondPlace"
+        android:layout_toEndOf="@+id/onethirdShim"
+        android:layout_alignEnd="@+id/twothirdShim"/>
+
+    <TextView
+        android:id="@+id/textviewM3SecondPlaceEstimate"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@+id/textviewM1SecondPlace"
+        android:layout_toEndOf="@+id/twothirdShim"/>
+
+    <View
+        android:id="@+id/dividerEstimation"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/textviewM1SecondPlaceEstimate"
+        android:background="@android:color/darker_gray"/>
+
+    <Button
+        android:id="@+id/buttonStartEstimationTF"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/centerShim"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@+id/dividerEstimation"
+        android:backgroundTint="@color/violet"
+        android:textColor="@color/white"
+        android:text="@string/STRING_BUTTON_START_ESTIMATION"
+        android:onClick="startEstimationActivity"/>
+
+    <Button
+        android:id="@+id/buttonStopEstimationTF"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/centerShim"
+        android:layout_marginStart="10dp"
+        android:layout_below="@+id/dividerEstimation"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="0dp"
+        android:backgroundTint="@color/violet"
+        android:textColor="@color/white"
+        android:text="@string/STRING_BUTTON_STOP_ESTIMATION"
+        android:onClick="stopEstimationActivity" />
+
+    <Button
+        android:id="@+id/buttonSaveTFModel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@+id/buttonStartEstimationTF"
+        android:backgroundTint="@color/violet"
+        android:textColor="@color/white"
+        android:text="@string/STRING_SAVE_TF_MODEL"
+        android:onClick="saveTFModelActivity"/>
+
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<resources>
+    <string name="STRING_APP_NAME">Activity Monitoring</string>
+    <string name="STRING_BUTTON_START">Start Recording</string>
+    <string name="STRING_BUTTON_STOP">Stop Recording</string>
+    <string name="STRING_BUTTON_WRITE_TO_FILE">Write to File</string>
+    <string name="STRING_BUTTON_DELETE_DATA">Delete Data</string>
+    <string name="STRING_ESTIMATION">Estimation [%]:</string>
+    <string name="STRING_SITTING">Sitting:</string>
+    <string name="STRING_STANDING">Standing:</string>
+    <string name="STRING_BUTTON_START_ESTIMATION">Start Estimation</string>
+    <string name="STRING_BUTTON_STOP_ESTIMATION">Stop Estimation</string>
+    <string name="STRING_CHANGE_PAGE">Change Page</string>
+    <string name="STRING_BACK">Go Back</string>
+    <string name="STRING_START_TRAINING">Start Training</string>
+    <string name="STRING_STOP_TRAINING">Stop Training</string>
+    <string name="STRING_START_INFERENCE">Start Inference</string>
+    <string name="STRING_STOP_INFERENCE">Stop Inference</string>
+    <string name="STRING_ESTIMATION_T2">Estimation [Top 2]:</string>
+    <string name="STRING_MOST_LIKELY">ML:</string>
+    <string name="STRING_SECOND_MOST_LIKELY">SML:</string>
+    <string name="STRING_START_COLLECTING">Start Collecting</string>
+    <string name="STRING_STOP_COLLECTING">Stop Collecting</string>
+    <string name="model_1">Model 1:</string>
+    <string name="model_2">Model 2:</string>
+    <string name="model_3">Model 3:</string>
+    <string name="STRING_SAVE_TF_MODEL">Save TF Model</string>
+</resources>
